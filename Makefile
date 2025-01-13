@@ -6,7 +6,7 @@ server:
 	python manage.py migrate && python manage.py runserver
 
 run-celery-server:
-	celery -A accounting_service worker --loglevel DEBUG -Q celery,accounting_service_send_user_account_per_url_webhook  --concurrency=1
+	celery -A maltina worker --loglevel DEBUG  --concurrency=1
 
 makemessages:
 	python manage.py makemessages -l fa --ignore venv

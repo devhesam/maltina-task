@@ -4,11 +4,7 @@ djangorestframework
 Pillow
 django-filter
 mysqlclient
-django-constance[database]
 django-redis
-sentry-sdk
 celery==5.3
 requests==2.31
 flake8==6.1.0
-django-cors-headers==4.3.1
-PyJWT==2.8.0
