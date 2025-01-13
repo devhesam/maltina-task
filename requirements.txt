@@ -8,3 +8,4 @@ django-redis
 celery==5.3
 requests==2.31
 flake8==6.1.0
+beautifulsoup4
