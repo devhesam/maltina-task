@@ -10,4 +10,4 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'code', 'rate', 'price', 'is_active', 'created_time', 'updated_time']
 
     def get_rate(self, obj):
-        return obj.average_rating() or 0
+        return obj.average_rating()
