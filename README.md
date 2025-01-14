@@ -31,7 +31,7 @@ This API receives a string, which is an Amazon product code. For example: `B0CGC
 1. Clone the repository:
    ```bash
    git clone https://github.com/devhesam/maltina-task.git
-   cd repo
+   cd maltina-task
 
 
 2. Create and activate a virtual environment:
@@ -47,7 +47,12 @@ This API receives a string, which is an Amazon product code. For example: `B0CGC
 4. Run database migrations:
     ```bash
    python manage.py migrate
-5. Start the local server:
+5. Create logs directory in root of project
+   ```bash
+   mkdir logs
+6. Implement .env based on .env_example
+
+7. Start the local server:
     ```bash
    python manage.py runserver
 
