@@ -13,7 +13,7 @@ class Product(BaseModel):
 
     def average_rating(self):
         ratings = self.ratings.all()
-        return ratings.aggregate(models.Avg('score'))['score__avg'] or 0
+        return ratings.aggregate(avg_rating=models.Avg('rate')).get('avg_rating', 0)
 
     def __str__(self):
         return self.name

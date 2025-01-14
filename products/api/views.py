@@ -16,7 +16,7 @@ class ProductAPIView(APIView):
             return Response(cached_product, status=status.HTTP_200_OK)
 
         try:
-            product = Product.objects.get(product_code=product_code)
+            product = Product.objects.get(code=product_code)
             serializer = ProductSerializer(product)
             cache.set(cache_key, serializer.data, timeout=3600)
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -25,7 +25,7 @@ class ProductAPIView(APIView):
 
         try:
             product_data = crawl_amazon(product_code)
-            product = Product.objects.create(product_code=product_code, **product_data)
+            product = Product.objects.create(code=product_code, **product_data)
             serializer = ProductSerializer(product)
             cache.set(cache_key, serializer.data, timeout=3600)
             return Response(serializer.data, status=status.HTTP_201_CREATED)

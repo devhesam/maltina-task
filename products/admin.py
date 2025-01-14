@@ -9,3 +9,11 @@ class ProjectAdmin(admin.ModelAdmin):
     list_editable = ['is_active']
     readonly_fields = ['created_time', 'updated_time']
     search_fields = ['name']
+
+@admin.register(Rating)
+class RatingAdmin(admin.ModelAdmin):
+    list_display = ['id', 'product', 'rate']
+    list_filter = ['product']
+    raw_id_fields = ['product']
+
+

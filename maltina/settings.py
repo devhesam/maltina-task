@@ -152,7 +152,6 @@ REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_CLASSES': [
         'rest_framework.throttling.ScopedRateThrottle',
     ],
-    'EXCEPTION_HANDLER': 'utils.exception_handler.custom_exception_handler',
     'DEFAULT_THROTTLE_RATES': {
         'send_otp_sms': '5/min',
         'send_otp_email': '5/min',
